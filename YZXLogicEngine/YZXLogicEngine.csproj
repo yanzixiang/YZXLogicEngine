@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7742CB79-B79E-4108-A44E-0A545D2E5D00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YZXLogicEngine</RootNamespace>
+    <AssemblyName>YZXLogicEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <NuGetPackageImportStamp>2ec32532</NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Projects\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET462</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\IronPython.2.7.9\lib\net45\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\IronPython.2.7.9\lib\net45\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.SQLite, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\IronPython.2.7.9\lib\net45\IronPython.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Wpf, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\IronPython.2.7.9\lib\net45\IronPython.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus4, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\YZX.RTA\YZX.RTA\packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcRcw.Da, Version=3.0.3.0, Culture=neutral, PublicKeyToken=9a40e993cbface53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\DLL\OPC\OpcRcw.Da.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\IronPythonDebuger.xaml.cs">
+      <DependentUpon>IronPythonDebuger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataType\UintIndexer.cs" />
+    <Compile Include="DataType\ByteIndexer.cs" />
+    <Compile Include="DataType\YZXByte.cs" />
+    <Compile Include="DataType\YZXDataTypes.cs" />
+    <Compile Include="DataType\YZXUshort.cs" />
+    <Compile Include="Extensions\OPCExtensions.cs" />
+    <Compile Include="libnodave.net.cs" />
+    <Compile Include="Morse\MorseConvert.cs" />
+    <Compile Include="Morse\MorseReceiver.cs" />
+    <Compile Include="Morse\ToggleEventArgs.cs" />
+    <Compile Include="Omron\Class1.cs" />
+    <Compile Include="Sharp7.cs" />
+    <Compile Include="Task\IronPythonTaskMonitor.cs" />
+    <Compile Include="Task\YZXTaskExceptionEventArgs.cs" />
+    <Compile Include="Task\IPYTracebackEventArgs.cs" />
+    <Compile Include="Task\CSharpTask.cs" />
+    <Compile Include="Task\IronPythonTask.cs" />
+    <Compile Include="Task\YZXTask.cs" />
+    <Compile Include="UDT\YZXUDT.cs" />
+    <Compile Include="UDT\YZXUDTTag.cs" />
+    <Compile Include="UDT\YZXCPUStatus.cs" />
+    <Compile Include="UDT\YZXTaskStatus.cs" />
+    <Compile Include="UDT\YZXCylinder.cs" />
+    <Compile Include="UDT\YZXUnitStatus.cs" />
+    <Compile Include="Unit\BISM4.cs" />
+    <Compile Include="Unit\ModbusTCPUnit.cs" />
+    <Compile Include="Unit\SimaticNETUnit.cs" />
+    <Compile Include="Unit\UR20WEBUnit.cs" />
+    <Compile Include="Unit\RandomUnit.cs" />
+    <Compile Include="Unit\Snap7ClientUnit.cs" />
+    <Compile Include="Unit\YZXS7Client.cs" />
+    <Compile Include="Unit\YZXWriteableUnit.cs" />
+    <Compile Include="YZXAddress.cs" />
+    <Compile Include="YZXCPU.IronPython.cs" />
+    <Compile Include="YZXCPU.Task.cs" />
+    <Compile Include="YZXCPU.cs" />
+    <Compile Include="Unit\YZXUnit.cs" />
+    <Compile Include="DataType\UshortIndexer.cs" />
+    <Compile Include="DataType\YZXUint.cs" />
+    <Compile Include="DataType\YZXBit.cs" />
+    <Compile Include="Task\YZXTimerTask.cs" />
+    <Compile Include="YZXCPUMemory.cs" />
+    <Compile Include="YZXCPUProject.cs" />
+    <Compile Include="YZXUnitMemoryMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\gitt\Common\Common.csproj">
+      <Project>{8f8733ab-cf0a-4d90-a665-e0d03d69e99c}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IronPythonConsoleForm\IronPythonConsoleForm\IronPythonConsoleForm.csproj">
+      <Project>{5b4de2a6-8357-4f45-bf54-7c3cdffb7e22}</Project>
+      <Name>IronPythonConsoleForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YZXMessaging\YZXMessaging.csproj">
+      <Project>{35ad5641-59b1-479f-9245-8177657bf2ff}</Project>
+      <Name>YZXMessaging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Control\IronPythonDebuger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libnodave.X64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\" />
+    <Folder Include="Window\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
